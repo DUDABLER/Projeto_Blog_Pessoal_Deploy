@@ -4,6 +4,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Postagem } from './postagem/entities/postagem.entity';
 import { PostagemModule } from './postagem/postagem.modules';
+import { Tema } from './tema/entities/tema.entity';
+import { TemaModule } from './tema/tema.module';
 
 @Module({
   imports: [
@@ -14,10 +16,11 @@ import { PostagemModule } from './postagem/postagem.modules';
       username: 'root', // numbre de usuario para acceder a la base de datos
       password: '21081992', // contraseña de acceso a la base de datos
       database: 'db_blogpessoal', //nombre de la base de datos
-      entities: [Postagem], //entidades que se van a usar en la base de datos
+      entities: [Postagem, Tema], //entidades que se van a usar en la base de datos
       synchronize: true,
     }),
     PostagemModule,
+    TemaModule,
   ],
   controllers: [AppController],
   providers: [AppService],
