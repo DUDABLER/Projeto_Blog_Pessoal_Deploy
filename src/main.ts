@@ -22,6 +22,6 @@ app.useGlobalPipes(new ValidationPipe()); //metodo configuracion de validacion d
 
 app.enableCors(); //configuracion de cor para permitir requisiociones de otros origenes
 
-  await app.listen(process.env.PORT ?? 4000); // ejecucion de aplicacion nest, configuracion de la puerta del servidor
+  await app.listen(process.env.PORT || 8000); // ejecucion de aplicacion nest, configuracion de la puerta del servidor
 }
 bootstrap();
